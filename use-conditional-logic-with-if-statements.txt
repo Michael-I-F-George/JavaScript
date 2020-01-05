@@ -1,0 +1,23 @@
+// Example
+function ourTrueOrFalse(isItTrue) {
+  if (isItTrue) {
+    return "Yes, it's true";
+  }
+  return "No, it's false";
+}
+
+// Setup
+function trueOrFalse(wasThatTrue) {
+  var returnValue = "No, that was false";
+  // Only change code below this line.
+  if (wasThatTrue) {
+    returnValue = "Yes, that was true";
+  }
+
+  return returnValue;
+  // Only change code above this line.
+
+}
+
+// Change this value to test
+trueOrFalse(true);

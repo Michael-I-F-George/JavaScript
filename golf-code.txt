@@ -1,0 +1,27 @@
+var names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+function golfScore(par, strokes) {
+  // Only change code below this line
+  var sReturnValue = "";
+
+  if (strokes === 1) {
+    sReturnValue = names[0];
+  }
+  else {
+    var nStrokesMinusPar = strokes - par;
+
+    if (nStrokesMinusPar > 3) {
+      nStrokesMinusPar = 3; // <=> strokes >= par + 3
+    } else if (nStrokesMinusPar < -2) {
+      nStrokesMinusPar = -2; // <=> strokes <= par - 2
+    }
+
+    sReturnValue = names[nStrokesMinusPar+3];
+  }
+
+
+  return sReturnValue;
+  // Only change code above this line
+}
+
+// Change these values to test
+golfScore(5, 4);
